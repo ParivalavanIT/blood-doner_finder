@@ -10,6 +10,7 @@ st.set_page_config(
     page_icon="🩸"
 )
 
+
 @st.cache_data
 def load_data():
 
@@ -29,7 +30,6 @@ selected_location = st.sidebar.text_input("Search Location", "")
 name = st.sidebar.text_input("Search Name", "")
 
 willing_to_donate = st.sidebar.checkbox("Willing to Donate for Any Emergency")
-
 
 
 def fuzzy_search_location(input_location, locations):
@@ -68,5 +68,6 @@ else:
         st.write(f"**Location:** {row['Current Location']}")
         st.write("---")
 
-
-
+st.write("""
+    This app is created by the volunteers of Paavai YRC to find blood donors inside the Paavai campus.
+""")
