@@ -5,7 +5,10 @@ from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 
 
-
+st.set_page_config(
+    page_title="Blood doner finder",
+    page_icon="🩸"
+)
 
 @st.cache_data
 def load_data():
